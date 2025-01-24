@@ -152,8 +152,6 @@ def main() -> None:
     duration_secs:int = 5  # duration in seconds
     create_folders_periodically(duration_secs)
 
-    # TODO: Add options e.g., to force lowercase and remove spaces 
-    # to one or more of your functions (e.g. function 2) 
     # Call your function and test these options
     regions = [
       "North America", 
@@ -179,4 +177,3 @@ def main() -> None:
 if __name__ == '__main__':
     main()
 
-#TODO: Run this as a script to test that all functions work as intended.
