@@ -42,7 +42,7 @@ def create_folders_for_range(start_year: int = 2024, end_year: int = 2025) -> No
     start_year -- The starting year of the range (inclusive). Default is 2024.
     end_year -- The ending year of the range (inclusive). Default is 2025.
     '''
-    for calendar_year in range(start_year, end_year):
+    for calendar_year in range(start_year, end_year + 1):
         folder_name = f"{project_path}/{calendar_year}"
         pathlib.Path(folder_name).mkdir(parents=True, exist_ok=True)
     
@@ -112,7 +112,7 @@ def create_folders_periodically(duration_seconds: int = 10, quantity_of_folders:
     quantity_of_folders -- The max number of folders to create. Default is 7.
     '''
     # Create folders at 10-second intervals
-    for i in range(1, quantity_of_folders):
+    for i in range(1, quantity_of_folders + 1):
         folder_name = f"{project_path}/{i}"
         pathlib.Path(folder_name).mkdir(parents=True, exist_ok=True)
         print(f"Folder '{folder_name}' created successfully!")
